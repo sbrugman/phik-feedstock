@@ -1,5 +1,5 @@
 {% set name = "PhiK" %}
-{% set version = "0.9.8" %}
+{% set version = "0.9.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/KaveIO/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e10e0ca0108dc069d597b8629efee717842fd93250cf7912a7a49fd2a5f32897
+  sha256: e58a113067f272f95be5ff062114c96777b88fe274139dd336dbfdea016d338d
 
 build:
   number: 0
   noarch: python
   entry_points:
     - phik_trial = phik.entry_points:phik_trial  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -41,7 +41,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Phi_K correlation analyzer library'
+  summary: Phi_K correlation analyzer library
 
   # The remaining entries in this section are optional, but recommended.
   description: |
