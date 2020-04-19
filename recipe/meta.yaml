@@ -1,5 +1,5 @@
 {% set name = "PhiK" %}
-{% set version = "0.9.10" %}
+{% set version = "0.9.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/KaveIO/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e58a113067f272f95be5ff062114c96777b88fe274139dd336dbfdea016d338d
+  sha256: 7cfb85f86a2447b883a5cc90fe31b5efeb3fdce51ebea57ae43a3fa8ffb09458
 
 build:
   number: 0
@@ -28,10 +28,6 @@ requirements:
     - matplotlib >=2.2.3
     - numba >=0.38.1
     - joblib >=0.14.1
-    - pytest >=4.0.2
-    - pytest-pylint >=0.13.0
-    - nbconvert >=5.3.1
-    - jupyter_client >=5.2.3
 
 test:
   imports:
